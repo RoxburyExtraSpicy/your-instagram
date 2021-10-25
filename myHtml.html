@@ -674,331 +674,225 @@
 </section>
 
 </body>
-<script>
-  $('document').ready(function(){
+<style>
 
-        var swiper = new Swiper(".mySwiper", {
-          spaceBetween: 30,
-          centeredSlides: true,
-          effect:"fade",
-          autoplay: {
-            delay: 2500,
-            disableOnInteraction: false,
-          }
-        });
+  .my-col-5{
+    float:left;
+    width:18.5%;
+    padding:0;
+    margin-left:0.5%;
+    margin-right: 0.5%;
+    border:0;
+  }
 
+  .parent {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
 
-      var untoldSwiper = new Swiper(".untoldSwiper", {
-          spaceBetween: 0,
-          effect: "fade",
-          autoplay: {
-              delay: 2500,
-              disableOnInteraction: false,
-          }
-        });
+  .image-11 {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
 
+  .image-2 {
+    position: absolute;
+    top: -30px;
+    left: 280px;
+  }
 
-        $('.nav-link').on('click', function(event) {
-          var target = $( $(this).attr('href') );
+  .padding-02 {
+      padding: 0.2%;
+  }
 
-          if( target.length ) {
-              event.preventDefault();
-              $('html, body').animate({
-                  scrollTop: target.offset().top
-              }, 1000);
-          }
-        });
+  .click-for-more-css {
+      position:absolute;
+      top:32%;
+      left:87%;
+  }
 
-        $('.js-scroll-trigger').on('click', function(){
-            if($(window).width() < 974) {
-              $('.navbar-collapse').collapse('hide');
-              $(".navbar-toggler-right").css("display", "inline-block");
-              $(".swiper-button-next").css("display", "block");
-              $(".swiper-button-prev").css("display", "block");
-              $(".swiper-text").css("display", "block");
-          }
-        });
+  .click-back-css {
+      display:none;
+      position: absolute;
+      top:32%;
+      left:3%;
+  }
 
+  .click-more-css {
+      display:none;
+      position:absolute;
+      top:32%;
+      left:87%;
+  }
 
-        $('.navbar-toggler-right').on('click', function(){
+  .click-much-more-css{
+      display:none;
+      position: absolute;
+      top:32%;
+      left:87%;
+  }
 
-          $(".navbar-toggler-right").css("display", "none");
-          $(".swiper-button-next").css("display", "none");
-          $(".swiper-button-prev").css("display", "none");
-          $(".swiper-text").css("display", "none");
-          if($("#navbarCollapse1").hasClass('.hide')){
-            $(".navbar-toggler-right").css("display", "inline-block");
-            $(".swiper-button-next").css("display", "block");
-            $(".swiper-button-prev").css("display", "block");
-            $(".swiper-text").css("display", "block");
-          }
-        })
-
-
-
-          $('.click-me-monolink').click(function(){
-             $('.first-row').css('display', 'none');
-             $('.second-row').css('display', 'block');
-             $('.click-back-monolink').css('display', 'block');
-             $('.click-me-monolink').css('display', 'none');
-          });
-
-          $('.click-back-monolink').click(function(){
-            $('.click-me-monolink').css('display', 'block');
-            $('.first-row').css('display', 'block');
-            $('.second-row').css('display', 'none');
-            $('.click-back-monolink').css('display', 'none');
-          });
-
-
-          $('.click-me-lost-frequencies').click(function(){
-               $('.first-lost-row').css('display','none');
-               $('.second-lost-row').css('display','block');
-               $('.third-lost-row').css('display', 'none');
-               $('.fourth-lost-row').css('display', 'none');
-
-               $('.click-me-lost-frequencies').css('display', 'none');
-               $('.back-lost-frequencies').css('display', 'block');
-               $('.back-2-lost-frequencies').css('display', 'none');
-               $('.back-3-lost-frequencies').css('display', 'none');
-               $('.more-lost-frequencies').css('display', 'block');
-               $('.even-more-lost-frequencies').css('display', 'none');
-           });
-
-           $('.back-lost-frequencies').click(function(){
-               $('.first-lost-row').css('display','block');
-               $('.second-lost-row').css('display','none');
-               $('.third-lost-row').css('display', 'none');
-               $('.fourth-lost-row').css('display', 'none');
-
-               $('.click-me-lost-frequencies').css('display', 'block');
-               $('.back-lost-frequencies').css('display', 'none');
-               $('.back-2-lost-frequencies').css('display', 'none');
-               $('.back-3-lost-frequencies').css('display', 'none');
-               $('.more-lost-frequencies').css('display', 'none');
-               $('.even-more-lost-frequencies').css('display', 'none');
-           });
-
-           $('.more-lost-frequencies').click(function(){
-               $('.first-lost-row').css('display','none');
-               $('.second-lost-row').css('display','none');
-               $('.third-lost-row').css('display', 'block');
-               $('.fourth-lost-row').css('display', 'none');
-
-               $('.click-me-lost-frequencies').css('display', 'none');
-               $('.back-lost-frequencies').css('display', 'none');
-               $('.back-2-lost-frequencies').css('display', 'block');
-               $('.back-3-lost-frequencies').css('display', 'none');
-               $('.more-lost-frequencies').css('display', 'none');
-               $('.even-more-lost-frequencies').css('display', 'block');
-           });
-
-
-            $('.back-2-lost-frequencies').click(function () {
-               $('.first-lost-row').css('display', 'none');
-               $('.second-lost-row').css('display','block');
-               $('.third-lost-row').css('display', 'none');
-               $('.fourth-lost-row').css('display', 'none');
-
-               $('.click-me-lost-frequencies').css('display', 'none');
-               $('.back-lost-frequencies').css('display', 'block');
-               $('.back-2-lost-frequencies').css('display', 'none');
-               $('.back-3-lost-frequencies').css('display', 'none');
-               $('.more-lost-frequencies').css('display', 'block');
-               $('.even-more-lost-frequencies').css('display', 'none');
-           });
-
-           $('.even-more-lost-frequencies').click(function(){
-               $('.first-lost-row').css('display','none');
-               $('.second-lost-row').css('display','none');
-               $('.third-lost-row').css('display', 'none');
-               $('.fourth-lost-row').css('display', 'block');
-
-               $('.click-me-lost-frequencies').css('display', 'none');
-               $('.back-lost-frequencies').css('display', 'none');
-               $('.back-2-lost-frequencies').css('display', 'none');
-               $('.back-3-lost-frequencies').css('display', 'block');
-               $('.more-lost-frequencies').css('display', 'none');
-               $('.even-more-lost-frequencies').css('display', 'none');
-           });
-
-           $('.back-3-lost-frequencies').click(function () {
-               $('.first-lost-row').css('display', 'none');
-               $('.second-lost-row').css('display','none');
-               $('.third-lost-row').css('display', 'block');
-               $('.fourth-lost-row').css('display', 'none');
-
-               $('.click-me-lost-frequencies').css('display', 'none');
-               $('.back-lost-frequencies').css('display', 'none');
-               $('.back-2-lost-frequencies').css('display', 'block');
-               $('.back-3-lost-frequencies').css('display', 'none');
-               $('.more-lost-frequencies').css('display', 'block');
-               $('.even-more-lost-frequencies').css('display', 'none');
-           });
-
-
-          if ($(window).width() < 960) {
-            $('.fas-bar').css('color', 'black');
-
-            $('.fas-bar').click(function(){
-              $('.navbar.top-bar').css('background-color', 'white');
-              $('.fas-bar').css('display', 'none');
-              $('.sps--abv').css('background-color', 'white');
-            });
-
-            $('.nav-link').click(function(){
-              $('.fas-bar').css('display', 'block');
-            })
-          }
-
-          if ($(window).width() < 960) {
-            $('.fas-bar').css('display', 'none');
-          }
-  });
-
-  /* ========================================================================
-  * ScrollPos-Styler v0.6
-  * https://github.com/acch/scrollpos-styler
-  * ========================================================================
-  * Copyright 2015 Achim Christ
-  * Licensed under MIT (https://github.com/acch/scrollpos-styler/blob/master/LICENSE)
-  * ======================================================================== */
-
-  // JSHint directives
-  /* exported ScrollPosStyler */
-
-  var ScrollPosStyler = (function(document, window) {
-  "use strict";
-
-  /* ====================
-  * private variables
-  * ==================== */
-  var scrollPosY = 0,
-     busy = false,
-     onTop = true,
-
-     // toggle style / class when scrolling below this position (in px)
-     scrollOffsetY = 1,
-
-     // choose elements to apply style / class to
-     elements = document.getElementsByClassName("sps");
-
-
-  /* ====================
-  * private funcion to check scroll position
-  * ==================== */
-  function onScroll() {
-   // ensure that events don't stack
-   if (!busy) {
-     // get current scroll position from window
-     scrollPosY = window.pageYOffset;
-
-     // if we were above, and are now below scroll position...
-     if (onTop && scrollPosY > scrollOffsetY) {
-       // suspend accepting scroll events
-       busy = true;
-
-       // remember that we are below scroll position
-       onTop = false;
-
-       // asynchronuously add style / class to elements
-       window.requestAnimationFrame(belowScrollPos);
-
-     // if we were below, and are now above scroll position...
-     } else if (!onTop && scrollPosY <= scrollOffsetY) {
-       // suspend accepting scroll events
-       busy = true;
-
-       // remember that we are above scroll position
-       onTop = true;
-
-       // asynchronuously add style / class to elements
-       window.requestAnimationFrame(aboveScrollPos);
-     }
-   }
+  .click-even-more-css {
+      display:none;
+      position: absolute;
+      top: 32%;
+      left:87%;
   }
 
 
-  /* ====================
-  * private function to style elements when above scroll position
-  * ==================== */
-  function aboveScrollPos() {
-   // iterate over elements
-   // for (var elem of elements) {
-   for (var i = 0; elements[i]; ++i) { // chrome workaround
-     // add style / class to element
-     elements[i].classList.add("sps--abv");
-     elements[i].classList.remove("sps--blw");
-   }
-
-   // resume accepting scroll events
-   busy = false;
+  .second-row {
+      display:none;
   }
 
-  /* ====================
-  * private function to style elements when below scroll position
-  * ==================== */
-  function belowScrollPos() {
-   // iterate over elements
-   // for (var elem of elements) {
-   for (var i = 0; elements[i]; ++i) { // chrome workaround
-     // add style / class to element
-     elements[i].classList.add("sps--blw");
-     elements[i].classList.remove("sps--abv");
-   }
+  .second-lost-row {
+      display:none;
+  }
 
-   // resume accepting scroll events
-   busy = false;
+  .third-lost-row {
+      display:none;
+  }
+
+  .fourth-lost-row {
+      display:none;
+  }
+  .second-row {
+    display:none;
+  }
+
+  .click-for-more-css {
+      position:absolute;
+      top:32%;
+      left:87%;
+  }
+
+  .click-back-css {
+      display:none;
+      position: absolute;
+      top:32%;
+      left:3%;
   }
 
 
-  /* ====================
-  * public function to initially style elements based on scroll position
-  * ==================== */
-  var pub = {
-   init: function() {
-     // suspend accepting scroll events
-     busy = true;
+  .navbar.top-bar {
+  	border-radius: 0;
+    top:0px;
+    position:fixed;
+  	padding: 16px 0;
+  	z-index: 16;
+  }
+  .navbar-toggler {
+  	border: 1px solid #fff;
+  	color: #fff;
+  	position: absolute;
+  	right: 21px;
+  }
 
-     // get current scroll position from window
-     scrollPosY = window.pageYOffset;
+  .sps {
+  	padding: 1em .5em;
+  	position: fixed;
+  	top: 0;
+  	left: 0;
+  	transition: all 0.25s ease;
+  	width: 100%;
+  }
+  .sps--abv {
+  	background-color: transparent;
+  	color: #000;
+  }
+  .sps--blw {
+  	background-color: white;
+  	color: black;
+  }
 
-     // if we are below scroll position...
-     if (scrollPosY > scrollOffsetY) {
-       // remember that we are below scroll position
-       onTop = false;
+  .top-bar a.navbar-brand span {
+  	color: black;
+  }
 
-       // asynchronuously add style / class to elements
-       window.requestAnimationFrame(belowScrollPos);
+  .top-bar .nav-link {
+    color: black;
+      text-shadow: 2px 2px white;
+      font-family: "Papyrus";
+      font-size: 1em;
+      text-align: center;
+      padding: 1%;
+      text-decoration: none;
+  }
+  .sps--blw.top-bar .nav-link {
+  	color: #000
+  }
+  .top-bar .navbar-nav .nav-item {
+  	margin: 0
+  }
 
-     // if we are above scroll position...
-     } else { // (scrollPosY <= scrollOffsetY)
-       // remember that we are above scroll position
-       onTop = true;
+  .sps--abv.top-bar .nav-link:hover, .sps--abv.top-bar .nav-item.active a {
+    border-bottom: 2px solid black;
+    color: black;
+  }
+  .sps--blw.top-bar .nav-link:hover, .sps--blw.top-bar .nav-item.active a {
+  	color: #0297ff;
+  	border-bottom: none;
+  	border-radius: 0;
+  }
 
-       // asynchronuously add style / class to elements
-       window.requestAnimationFrame(aboveScrollPos);
-     }
-   }
-  };
+  /*Swiper*/
+  .swiper-container {
+  	width: 100%;
+  	height: 100vh;
+  }
+  .swiper-slide {
+  	text-align: center;
+  	font-size: 18px;
+  	background: #fff;
+  	/* Center slide text vertically */
+  	display: -webkit-box;
+  	display: -ms-flexbox;
+  	display: -webkit-flex;
+  	display: flex;
+  	-webkit-box-pack: center;
+  	-ms-flex-pack: center;
+  	-webkit-justify-content: center;
+  	justify-content: center;
+  	-webkit-box-align: center;
+  	-ms-flex-align: center;
+  	-webkit-align-items: center;
+  	align-items: center;
+  }
+  .main-slider .slider-bg-position {
+  	background-size: cover!important;
+  	background-position: center center!important;
+  }
+  .main-slider .swiper-button-prev, .main-slider .swiper-button-next {
+  	background-image: none!important;
+  	color: #fff;
+  	width: 50px;
+  	height: 50px;
+  	border: 1px solid #fff;
+  	text-align: center;
+  	line-height: 50px;
+  	font-size: 20px;
+  }
+  .main-slider h2 {
+  	color: #fff;
+  	font-size: 54px;
+  	line-height: 59px;
+  	padding: 0 19%;
+  	text-transform: uppercase;
+  }
+  .main-slider .swiper-pagination-bullet {
+  	width: 20px;
+  	height: 20px;
+  	background: rgba(255,255,255,0.9)
+  }
+  .main-slider .swiper-pagination-bullet-active {
+  	background: #0297ff
+  }
+
+  .action-sec{width:100%; float:left; background:#222}
+  .action-box{float:left; width:100%; text-align:center;}
+  .action-box h2{color:#fff; font-size:20px;}
 
 
-  /* ====================
-  * main initialization
-  * ==================== */
-  // add initial style / class to elements when DOM is ready
-  document.addEventListener("DOMContentLoaded", function() {
-   // defer initialization to allow browser to restore scroll position
-   window.setTimeout(pub.init, 1);
-  });
-
-  // register for window scroll events
-  window.addEventListener("scroll", onScroll);
-
-
-  return pub;
-  })(document, window);
-
-
-</script>
+</style>
 </html>
