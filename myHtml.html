@@ -676,6 +676,187 @@
 
 </body>
 <script>
+  $('document').ready(function(){
+
+        var swiper = new Swiper(".mySwiper", {
+          spaceBetween: 30,
+          centeredSlides: true,
+          effect:"fade",
+          autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+          }
+        });
+
+
+      var untoldSwiper = new Swiper(".untoldSwiper", {
+          spaceBetween: 0,
+          effect: "fade",
+          autoplay: {
+              delay: 2500,
+              disableOnInteraction: false,
+          }
+        });
+
+
+        $('.nav-link').on('click', function(event) {
+          var target = $( $(this).attr('href') );
+
+          if( target.length ) {
+              event.preventDefault();
+              $('html, body').animate({
+                  scrollTop: target.offset().top
+              }, 1000);
+          }
+        });
+
+        $('.js-scroll-trigger').on('click', function(){
+            if($(window).width() < 974) {
+              $('.navbar-collapse').collapse('hide');
+              $(".navbar-toggler-right").css("display", "inline-block");
+              $(".swiper-button-next").css("display", "block");
+              $(".swiper-button-prev").css("display", "block");
+              $(".swiper-text").css("display", "block");
+          }
+        });
+
+
+        $('.navbar-toggler-right').on('click', function(){
+
+          $(".navbar-toggler-right").css("display", "none");
+          $(".swiper-button-next").css("display", "none");
+          $(".swiper-button-prev").css("display", "none");
+          $(".swiper-text").css("display", "none");
+          if($("#navbarCollapse1").hasClass('.hide')){
+            $(".navbar-toggler-right").css("display", "inline-block");
+            $(".swiper-button-next").css("display", "block");
+            $(".swiper-button-prev").css("display", "block");
+            $(".swiper-text").css("display", "block");
+          }
+        })
+
+
+
+          $('.click-me-monolink').click(function(){
+             $('.first-row').css('display', 'none');
+             $('.second-row').css('display', 'block');
+             $('.click-back-monolink').css('display', 'block');
+             $('.click-me-monolink').css('display', 'none');
+          });
+
+          $('.click-back-monolink').click(function(){
+            $('.click-me-monolink').css('display', 'block');
+            $('.first-row').css('display', 'block');
+            $('.second-row').css('display', 'none');
+            $('.click-back-monolink').css('display', 'none');
+          });
+
+
+          $('.click-me-lost-frequencies').click(function(){
+               $('.first-lost-row').css('display','none');
+               $('.second-lost-row').css('display','block');
+               $('.third-lost-row').css('display', 'none');
+               $('.fourth-lost-row').css('display', 'none');
+
+               $('.click-me-lost-frequencies').css('display', 'none');
+               $('.back-lost-frequencies').css('display', 'block');
+               $('.back-2-lost-frequencies').css('display', 'none');
+               $('.back-3-lost-frequencies').css('display', 'none');
+               $('.more-lost-frequencies').css('display', 'block');
+               $('.even-more-lost-frequencies').css('display', 'none');
+           });
+
+           $('.back-lost-frequencies').click(function(){
+               $('.first-lost-row').css('display','block');
+               $('.second-lost-row').css('display','none');
+               $('.third-lost-row').css('display', 'none');
+               $('.fourth-lost-row').css('display', 'none');
+
+               $('.click-me-lost-frequencies').css('display', 'block');
+               $('.back-lost-frequencies').css('display', 'none');
+               $('.back-2-lost-frequencies').css('display', 'none');
+               $('.back-3-lost-frequencies').css('display', 'none');
+               $('.more-lost-frequencies').css('display', 'none');
+               $('.even-more-lost-frequencies').css('display', 'none');
+           });
+
+           $('.more-lost-frequencies').click(function(){
+               $('.first-lost-row').css('display','none');
+               $('.second-lost-row').css('display','none');
+               $('.third-lost-row').css('display', 'block');
+               $('.fourth-lost-row').css('display', 'none');
+
+               $('.click-me-lost-frequencies').css('display', 'none');
+               $('.back-lost-frequencies').css('display', 'none');
+               $('.back-2-lost-frequencies').css('display', 'block');
+               $('.back-3-lost-frequencies').css('display', 'none');
+               $('.more-lost-frequencies').css('display', 'none');
+               $('.even-more-lost-frequencies').css('display', 'block');
+           });
+
+
+            $('.back-2-lost-frequencies').click(function () {
+               $('.first-lost-row').css('display', 'none');
+               $('.second-lost-row').css('display','block');
+               $('.third-lost-row').css('display', 'none');
+               $('.fourth-lost-row').css('display', 'none');
+
+               $('.click-me-lost-frequencies').css('display', 'none');
+               $('.back-lost-frequencies').css('display', 'block');
+               $('.back-2-lost-frequencies').css('display', 'none');
+               $('.back-3-lost-frequencies').css('display', 'none');
+               $('.more-lost-frequencies').css('display', 'block');
+               $('.even-more-lost-frequencies').css('display', 'none');
+           });
+
+           $('.even-more-lost-frequencies').click(function(){
+               $('.first-lost-row').css('display','none');
+               $('.second-lost-row').css('display','none');
+               $('.third-lost-row').css('display', 'none');
+               $('.fourth-lost-row').css('display', 'block');
+
+               $('.click-me-lost-frequencies').css('display', 'none');
+               $('.back-lost-frequencies').css('display', 'none');
+               $('.back-2-lost-frequencies').css('display', 'none');
+               $('.back-3-lost-frequencies').css('display', 'block');
+               $('.more-lost-frequencies').css('display', 'none');
+               $('.even-more-lost-frequencies').css('display', 'none');
+           });
+
+           $('.back-3-lost-frequencies').click(function () {
+               $('.first-lost-row').css('display', 'none');
+               $('.second-lost-row').css('display','none');
+               $('.third-lost-row').css('display', 'block');
+               $('.fourth-lost-row').css('display', 'none');
+
+               $('.click-me-lost-frequencies').css('display', 'none');
+               $('.back-lost-frequencies').css('display', 'none');
+               $('.back-2-lost-frequencies').css('display', 'block');
+               $('.back-3-lost-frequencies').css('display', 'none');
+               $('.more-lost-frequencies').css('display', 'block');
+               $('.even-more-lost-frequencies').css('display', 'none');
+           });
+
+
+          if ($(window).width() < 960) {
+            $('.fas-bar').css('color', 'black');
+
+            $('.fas-bar').click(function(){
+              $('.navbar.top-bar').css('background-color', 'white');
+              $('.fas-bar').css('display', 'none');
+              $('.sps--abv').css('background-color', 'white');
+            });
+
+            $('.nav-link').click(function(){
+              $('.fas-bar').css('display', 'block');
+            })
+          }
+
+          if ($(window).width() < 960) {
+            $('.fas-bar').css('display', 'none');
+          }
+  });
+
   /* ========================================================================
   * ScrollPos-Styler v0.6
   * https://github.com/acch/scrollpos-styler
